@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sky Fun Quiz</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Sky Fun Quiz logo" class="logo">
+      <h1>Sky Fun Quiz</h1>
+    </div>
+    <p class="tag">Fast • Fun • Friendly — Beat the clock, climb the leaderboard!</p>
+  </header>
+
+  <main class="container">
+    <section id="quiz-area" class="card">
+      <div id="start-screen">
+        <h2>Welcome to Sky Fun Quiz</h2>
+        <p>Ready to play? Answer 5 questions as fast and correct as possible. Time bonus for speed!</p>
+        <label>
+          Your name: <input id="player-name" placeholder="Player" />
+        </label>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
+
+      <div id="question-screen" class="hidden">
+        <div id="meta">
+          <div id="player">Player: —</div>
+          <div id="timer">Time: <span id="time-left">0</span>s</div>
+        </div>
+        <h3 id="q-title">Question</h3>
+        <ul id="choices" class="choices"></ul>
+        <button id="next-btn" class="btn hidden">Next</button>
+      </div>
+
+      <div id="result-screen" class="hidden">
+        <h2>Finished!</h2>
+        <p id="result-text"></p>
+        <button id="save-score-btn" class="btn">Save Score</button>
+        <button id="play-again-btn" class="btn ghost">Play Again</button>
+      </div>
+    </section>
+
+    <aside class="card" id="leaderboard-card">
+      <h3>Leaderboard</h3>
+      <ol id="leaderboard"></ol>
+      <div class="leader-actions">
+        <button id="clear-leaderboard" class="btn ghost">Clear</button>
+        <button id="export-csv" class="btn">Export CSV</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Sky Fun Quiz</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
